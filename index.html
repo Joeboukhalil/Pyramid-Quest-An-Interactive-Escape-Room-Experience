@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Pyramid Escape Room - Chapter 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+        }
+        main {
+            padding: 20px;
+            margin-bottom: 60px; /* Added margin to prevent footer overlap */
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+        }
+        blockquote {
+            font-style: italic;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #333;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 10px;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed; /* Set position to fixed */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Egyptian Pyramid Escape Room - Chapter 1</h1>
+    <img src="pyramids/pyramids.jpg" alt="Header Image">
+</header>
+
+<main>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to the Egyptian Pyramid Escape Room! Step back in time to ancient Egypt and embark on a journey to construct the great pyramids.</p>
+    </section>
+
+    <section id="chapter1-description">
+        <h2>Chapter 1: The Riddle of the Hieroglyphs</h2>
+        <p>As you enter the construction site of the pyramids, you come across a wall adorned with hieroglyphs. One inscription catches your eye:</p>
+        <blockquote>
+            <p>"In the heart of the desert, we rise,<br>
+            Towers of stone that touch the skies.<br>
+            Built with labor and sweat, not gold,<br>
+            Our secrets hidden, yet to be told.</p>
+            <p>What stone was used to construct the pyramids,<br>
+            Quarried from the earth where the river flows?<br>
+            Its name you must uncover, if you are wise."</p>
+        </blockquote>
+    </section>
+
+    <section id="puzzle">
+        <h2>Puzzle</h2>
+        <p>Your task is to solve the riddle of the Hieroglyphs to unlock the next clue and continue your journey.</p>
+        <p>Hint: Think about the materials used in the construction of the Egyptian pyramids, particularly the type of stone that was quarried near the Nile River.</p>
+        <label for="answer">Enter your answer:</label>
+        <input type="text" id="answer" name="answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+    </section>
+
+    <section id="next-steps" style="display:none;">
+        <h2>Next Steps</h2>
+        <p>Congratulations! You've unlocked the next clue.</p>
+        <button onclick="continueToChapter2()">Continue to Chapter 2</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Egyptian Pyramid Escape Room</p>
+</footer>
+
+<script>
+    function checkAnswer() {
+        var answer = document.getElementById("answer").value.toLowerCase();
+        var result = document.getElementById("result");
+        if (answer === "limestone") {
+            result.textContent = "Correct! You've unlocked the next clue.";
+            document.getElementById("next-steps").style.display = "block";
+        } else {
+            result.textContent = "Incorrect. Please try again.";
+        }
+    }
+
+    function continueToChapter2() {
+        window.location.href = "chapter2.html";
+    }
+</script>
+
+</body>
+</html>

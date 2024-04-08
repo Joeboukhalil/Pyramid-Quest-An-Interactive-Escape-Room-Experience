@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Pyramid Escape Room - Chapter 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+        }
+        main {
+            padding: 20px;
+            margin-bottom: 60px; /* Added margin to prevent footer overlap */
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+        }
+        blockquote {
+            font-style: italic;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #333;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 10px;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed; /* Set position to fixed */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Egyptian Pyramid Escape Room - Chapter 3</h1>
+    <img src="pyramids/pyramids.jpg" alt="Header Image">
+</header>
+
+<main>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to Chapter 3 of the Egyptian Pyramid Escape Room! Let's continue our exploration of the ancient pyramids.</p>
+    </section>
+
+    <section id="chapter3-description">
+        <h2>Chapter 3: The Pharaoh and the Pyramids</h2>
+        <p>As you delve deeper into the mysteries of the pyramids, you uncover a fascinating fact:</p>
+        <blockquote>
+            <p>The Great Pyramid of Giza, one of the most iconic structures in history, was built during the reign of Pharaoh Khufu, also known as Cheops.</p>
+            <p>Khufu ruled during the Fourth Dynasty of the Old Kingdom and was the second pharaoh of this dynasty.</p>
+        </blockquote>
+        <p>Now, here's a question for you:</p>
+        <blockquote>
+            <p>Who was the pharaoh during the construction of the Great Pyramid of Giza?</p>
+        </blockquote>
+    </section>
+
+    <section id="question">
+        <h2>Question</h2>
+        <p>Enter your answer below:</p>
+        <input type="text" id="answer" name="answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+    </section>
+
+    <section id="next-steps" style="display:none;">
+        <h2>Next Steps</h2>
+        <p>Congratulations! You've unlocked the next clue.</p>
+        <button onclick="continueToChapter4()">Continue to Chapter 4</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Egyptian Pyramid Escape Room</p>
+</footer>
+
+<script>
+    function checkAnswer() {
+        var answer = document.getElementById("answer").value.toLowerCase();
+        var result = document.getElementById("result");
+        if (answer.includes("khufu") || answer.includes("cheops")) {
+            result.textContent = "Correct! You've unlocked the next clue.";
+            document.getElementById("next-steps").style.display = "block";
+        } else {
+            result.textContent = "Incorrect. Please try again.";
+        }
+    }
+
+    function continueToChapter4() {
+        window.location.href = "chapter4.html";
+    }
+</script>
+
+</body>
+</html>

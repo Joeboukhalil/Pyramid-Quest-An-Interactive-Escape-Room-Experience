@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Pyramid Escape Room - Chapter 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+        }
+        main {
+            padding: 20px;
+            margin-bottom: 60px; /* Added margin to prevent footer overlap */
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+        }
+        blockquote {
+            font-style: italic;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #333;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 10px;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed; /* Set position to fixed */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Egyptian Pyramid Escape Room - Chapter 4</h1>
+    <img src="pyramids/pyramids.jpg" alt="Header Image">
+</header>
+
+<main>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to Chapter 4 of the Egyptian Pyramid Escape Room! Let's uncover the secrets of how the stones were moved to the construction site of the pyramids.</p>
+    </section>
+
+    <section id="chapter4-description">
+        <h2>Chapter 4: The Mystery of Stone Transport</h2>
+        <p>As you investigate further, you learn about the incredible feat of moving massive stones to the pyramid construction site:</p>
+        <blockquote>
+            <p>The ancient Egyptians used a variety of methods to transport the large limestone and granite blocks to the pyramid sites.</p>
+            <p>One method involved the use of sledges pulled by workers and lubricated with water to reduce friction. Another method utilized wooden rollers and levers to move the stones over long distances.</p>
+        </blockquote>
+        <p>Now, here's a question for you:</p>
+        <blockquote>
+            <p>How did the ancient Egyptians transport the large stones to the pyramid construction sites?</p>
+        </blockquote>
+    </section>
+
+    <section id="question">
+        <h2>Question</h2>
+        <p>Enter your answer below:</p>
+        <input type="text" id="answer" name="answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+    </section>
+
+    <section id="next-steps" style="display:none;">
+        <h2>Next Steps</h2>
+        <p>Congratulations! You've unlocked the next clue.</p>
+        <button onclick="continueToChapter5()">Continue to Chapter 5</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Egyptian Pyramid Escape Room</p>
+</footer>
+
+<script>
+    function checkAnswer() {
+        var answer = document.getElementById("answer").value.toLowerCase();
+        var result = document.getElementById("result");
+        if (answer.includes("sledges") || answer.includes("rollers") || answer.includes("levers")) {
+            result.textContent = "Correct! You've unlocked the next clue.";
+            document.getElementById("next-steps").style.display = "block";
+        } else {
+            result.textContent = "Incorrect. Please try again.";
+        }
+    }
+
+    function continueToChapter5() {
+        window.location.href = "chapter5.html";
+    }
+</script>
+
+</body>
+</html>

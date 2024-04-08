@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egyptian Pyramid Escape Room - Chapter 8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            max-width: 100%;
+        }
+        main {
+            padding: 20px;
+            margin-bottom: 60px; /* Added margin to prevent footer overlap */
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #333;
+        }
+        blockquote {
+            font-style: italic;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #333;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 10px;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed; /* Set position to fixed */
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Egyptian Pyramid Escape Room - Chapter 8</h1>
+    <img src="pyramids/pyramids.jpg" alt="Header Image">
+</header>
+
+<main>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to Chapter 8 of the Egyptian Pyramid Escape Room! Let's continue our exploration of the mysteries hidden within the ancient pyramids.</p>
+    </section>
+
+    <section id="chapter8-description">
+        <h2>Chapter 8: The Legacy of the Pyramids</h2>
+        <p>As you near the end of your journey, you reflect on the lasting legacy of the pyramids:</p>
+        <blockquote>
+            <p>The pyramids stand as enduring symbols of ancient Egyptian civilization and ingenuity.</p>
+            <p>They continue to captivate the world with their architectural marvels and enigmatic secrets.</p>
+        </blockquote>
+        <p>Now, here's a question for you:</p>
+        <blockquote>
+            <p>What do the pyramids symbolize, and why do they continue to captivate the world?</p>
+        </blockquote>
+    </section>
+
+    <section id="question">
+        <h2>Question</h2>
+        <p>Enter your answer below:</p>
+        <input type="text" id="answer" name="answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+    </section>
+
+    <section id="next-steps" style="display:none;">
+        <h2>Next Steps</h2>
+        <p>Congratulations! You've completed the Egyptian Pyramid Escape Room.</p>
+        <p>Thank you for exploring the mysteries of the ancient pyramids with us.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Egyptian Pyramid Escape Room</p>
+</footer>
+
+<script>
+    function checkAnswer() {
+        var answer = document.getElementById("answer").value.toLowerCase();
+        var result = document.getElementById("result");
+        if (answer.includes("symbols") || answer.includes("ingenuity") || answer.includes("captivate")) {
+            result.textContent = "Correct! You've completed the Egyptian Pyramid Escape Room.";
+            document.getElementById("next-steps").style.display = "block";
+        } else {
+            result.textContent = "Incorrect. Please try again.";
+        }
+    }
+</script>
+
+</body>
+</html>
